@@ -37,7 +37,6 @@ public class Main {
 				
 				
 				
-				
 			}else if(no == 2) {
 	            //貸出
 				int index = 1;
