@@ -32,7 +32,7 @@ public class Main {
 			input.nextLine(); //改行を読み飛ばす
 			
 			if(no == 1) {
-	            //貸出物品表示
+	            //貸出物品表示 11/18宿題
 				
 				
 				
@@ -51,13 +51,19 @@ public class Main {
 				no = input.nextInt();
 				input.nextLine();
 				
-				// 現在の日時を取得する
-				LocalDateTime now = LocalDateTime.now();
-				System.out.println( now.getYear()+ "/" + now.getMonthValue() +"/" + now.getDayOfMonth() );
-				System.out.println( now.getHour() + ":" + now.getMinute() );
-				
-				list.get(no-1).setStartDate( now.getYear()+ "/" + now.getMonthValue() +"/" + now.getDayOfMonth() );
-				list.get(no-1).setStartTime( now.getHour() + ":" + now.getMinute() );
+				// 入力された番号の品物が貸し出されているか確認する
+				while( list.size() > no-1 && list.get(no-1).getStartDate() != "" ) {
+					no++; // 空いているところまで進める
+				}
+				if( list.size() > no-1 ) {
+					// 現在の日時を取得する
+					LocalDateTime now = LocalDateTime.now();
+					System.out.println( now.getYear()+ "/" + now.getMonthValue() +"/" + now.getDayOfMonth() );
+					System.out.println( now.getHour() + ":" + now.getMinute() );
+					
+					list.get(no-1).setStartDate( now.getYear()+ "/" + now.getMonthValue() +"/" + now.getDayOfMonth() );
+					list.get(no-1).setStartTime( now.getHour() + ":" + now.getMinute() );
+				}
 				
 			}else if(no == 3) {
 	            //返却

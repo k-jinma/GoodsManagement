@@ -2,6 +2,9 @@ package goods;
 
 public class License {
 
+	private static int cnt = 0;
+	
+	private int no;
 	private String serviceName; // サービス名（Zoom）
 	private String id; 			// ID
 	private String password; 	// Password
@@ -19,6 +22,9 @@ public class License {
 	}
 	
 	public License(String serviceName, String id, String password, String mailAddress) {
+		
+		cnt++;
+		this.no = cnt;
 		
 		this.serviceName = serviceName;
 		this.id = id;
