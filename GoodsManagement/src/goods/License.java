@@ -4,7 +4,7 @@ public class License {
 
 	private static int cnt = 0;
 	
-	private int no;
+	private int no;				// 管理番号
 	private String serviceName; // サービス名（Zoom）
 	private String id; 			// ID
 	private String password; 	// Password
@@ -39,6 +39,16 @@ public class License {
 	}
 	
 	
+	
+	
+	public int getNo() {
+		return no;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
 	public String getStartTime() {
 		return startTime;
 	}
