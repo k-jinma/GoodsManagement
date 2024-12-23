@@ -30,15 +30,32 @@ public class License {
 		this.id = id;
 		this.password = password;
 		this.mailAddress = mailAddress;
-		this.startDate = "";
-		this.startTime = "";
-		this.endDate = "";
-		this.endTime = "";
-		this.userName = "";
-		this.purpose = "";
+		this.startDate = " ";
+		this.startTime = " ";
+		this.endDate = " ";
+		this.endTime = " ";
+		this.userName = " ";
+		this.purpose = " ";
 	}
 	
-	
+	public License(String serviceName, String id, String password, String mailAddress,
+			String startDate, String startTime, String endDate, String endTime,
+			String userName, String purpose) {
+		
+		cnt++;
+		this.no = cnt;
+		
+		this.serviceName = serviceName;
+		this.id = id;
+		this.password = password;
+		this.mailAddress = mailAddress;
+		this.startDate = startDate;
+		this.startTime = startTime;
+		this.endDate = endDate;
+		this.endTime = endTime;
+		this.userName = userName;
+		this.purpose = purpose;
+	}	
 	
 	
 	public int getNo() {
